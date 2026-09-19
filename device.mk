@@ -308,6 +308,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
+# Platform
+TARGET_BOARD_PLATFORM := pineapple
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 

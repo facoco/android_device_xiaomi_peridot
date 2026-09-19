@@ -108,8 +108,8 @@ TARGET_KERNEL_CONFIG := \
 
 BOARD_KERNEL_CMDLINE := \
     sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
-    swinfo.fingerprint=peridot:$(LINEAGE_VERSION) \
-    mtdoops.fingerprint=peridot:$(LINEAGE_VERSION)
+    swinfo.fingerprint=peridot:$(YAAP_VERSION) \
+    mtdoops.fingerprint=peridot:$(YAAP_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -169,7 +169,7 @@ TARGET_KERNEL_EXT_MODULES := \
     nxp/opensource/driver
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/yaap/config/BoardConfigReservedSize.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
@@ -201,9 +201,6 @@ TARGET_COPY_OUT_SYSTEM_DLKM := system_dlkm
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
-
-# Platform
-TARGET_BOARD_PLATFORM := pineapple
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/props/odm.prop
